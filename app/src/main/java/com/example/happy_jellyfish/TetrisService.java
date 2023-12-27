@@ -3,12 +3,11 @@ package com.example.happy_jellyfish;
 import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
-
 import com.example.happy_jellyfish.Tetris.TetrisActivity;
 
 public class TetrisService extends Service {
     public TetrisService() {
-        new Thread(new Runnable() {
+        new Thread(new Thread() {
             @Override
             public void run() {
                 try {
@@ -25,7 +24,8 @@ public class TetrisService extends Service {
 
         stopSelf();
     }
-
+    @Override
+    public void onDestroy() {super.onDestroy();}
     @Override
     public IBinder onBind(Intent intent) {
         // TODO: Return the communication channel to the service.
