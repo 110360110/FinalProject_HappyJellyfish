@@ -12,7 +12,7 @@ import com.example.happy_jellyfish.TicTacToe.*;
 
 public class TicTacToeActivity extends AppCompatActivity {
 
-    Button button;
+    Button btn_start;
     int n = 3;
 
     @Override
@@ -20,8 +20,8 @@ public class TicTacToeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe);
 
-        button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
+        btn_start = findViewById(R.id.btn_start);
+        btn_start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(TicTacToeActivity.this, TicTacToeMainActivity.class);

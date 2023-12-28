@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.happy_jellyfish.MainActivity;
 import com.example.happy_jellyfish.R;
 
 public class TicTacToeMainActivity extends AppCompatActivity {
@@ -74,6 +75,7 @@ public class TicTacToeMainActivity extends AppCompatActivity {
         dialog.setCancelable(false);
         TextView dialogTextView = dialog.findViewById(R.id.textView);
         Button dialogButton = dialog.findViewById(R.id.button);
+        Button dialogExit = dialog.findViewById(R.id.back);
         if (rc == n || cc == n || d1 == n || d2 == n) {
             if (curr == 'x') {
                 textView.setText(player1 + " WON");
@@ -101,6 +103,16 @@ public class TicTacToeMainActivity extends AppCompatActivity {
                     dialog.dismiss();
                     finish();
                     startActivity(getIntent());
+                }
+            });
+
+            dialogExit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    Intent intent1 = new Intent(TicTacToeMainActivity.this, MainActivity.class);
+                    startActivity(intent1);
+                    finish();
                 }
             });
         }
