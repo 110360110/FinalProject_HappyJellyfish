@@ -13,14 +13,14 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.example.happy_jellyfish.Tetris.*;
+import com.example.happy_jellyfish.PaperScissorStone.*;
 import com.example.happy_jellyfish.TicTacToe.*;
 
 public class MainActivity extends AppCompatActivity {
     private ListView listView;
     private TextView tv_choose;
     private Button btn_open;
-    private String[] game=new String[]{"Tetris","TicTacToe","Orange"};
+    private String[] game=new String[]{"PaperScissorStone","TicTacToe","Orange"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 switch(tv_choose.getText().toString())
                 {
-                    case "選擇的項目是：Tetris" :
-                        //Intent intent = new Intent(MainActivity.this, TetrisActivity.class);
-                        //startActivity(intent);
+                    case "選擇的項目是：PaperScissorStone" :
+                        Intent intent = new Intent(MainActivity.this, PaperScissorStoneMainActivity.class);
+                        startActivity(intent);
                         break;
 
                     case "選擇的項目是：TicTacToe" :

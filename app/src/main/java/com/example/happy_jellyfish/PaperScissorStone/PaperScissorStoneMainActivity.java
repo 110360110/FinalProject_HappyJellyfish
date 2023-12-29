@@ -2,6 +2,7 @@ package com.example.happy_jellyfish.PaperScissorStone;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,35 +10,31 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.happy_jellyfish.R;
+import com.example.happy_jellyfish.*;
 
 import java.util.Random;
 
 public class PaperScissorStoneMainActivity extends AppCompatActivity {
 
+    Button b_rock, b_scissor, b_paper, btn_exit;
+    TextView tv_score;
+    ImageView iv_ComputerChoice, iv_HumanChoice;
+
+    int HumanScore,ComputerScore = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paper_scissor_stone_main);
 
-        Button b_rock, b_scissor, b_paper;
-        TextView tv_score;
-        ImageView iv_ComputerChoice, iv_HumanChoice;
-
-        int HumanScore,ComputerScore = 0;
 
 
-        @Override
-        protected void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+        b_paper = (Button) findViewById(R.id.b_paper);
+        b_scissor = (Button) findViewById(R.id.b_scissor);
+        b_rock = (Button) findViewById(R.id.b_rock);
+        btn_exit = (Button) findViewById(R.id.btn_exit);
 
-            b_paper = (Button) findViewById(R.id.b_paper);
-            b_scissor = (Button) findViewById(R.id.b_scissor);
-            b_rock = (Button) findViewById(R.id.b_rock);
-
-            iv_ComputerChoice = (ImageView) findViewById(R.id.iv_ComputerChoice);
-            iv_HumanChoice = (ImageView) findViewById(R.id.iv_HumanChoice);
+        iv_ComputerChoice = (ImageView) findViewById(R.id.iv_ComputerChoice);
+        iv_HumanChoice = (ImageView) findViewById(R.id.iv_HumanChoice);
 
             tv_score = (TextView) findViewById(R.id.tv_score);
 
@@ -70,7 +67,16 @@ public class PaperScissorStoneMainActivity extends AppCompatActivity {
                     tv_score.setText("SCORE HUMAN: " +Integer.toString(HumanScore) + " || COMPUTER: " +Integer.toString(ComputerScore));
                 }
             });
+
+            btn_exit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(PaperScissorStoneMainActivity.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
+
 
         public String play_turn(String player_choice) {
 
@@ -127,7 +133,4 @@ public class PaperScissorStoneMainActivity extends AppCompatActivity {
                 return "don't know";
             }
         }
-
-
     }
-}
