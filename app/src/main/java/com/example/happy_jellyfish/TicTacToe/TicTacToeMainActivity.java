@@ -93,6 +93,15 @@ public class TicTacToeMainActivity extends AppCompatActivity {
                     startActivity(getIntent());
                 }
             });
+            dialogExit.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    Intent intent1 = new Intent(TicTacToeMainActivity.this, MainActivity.class);
+                    startActivity(intent1);
+                    finish();
+                }
+            });
         } else if (c == n * n) {
             textView.setText("DRAW");
             dialogTextView.setText("Match DRAW");
@@ -105,7 +114,6 @@ public class TicTacToeMainActivity extends AppCompatActivity {
                     startActivity(getIntent());
                 }
             });
-
             dialogExit.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
