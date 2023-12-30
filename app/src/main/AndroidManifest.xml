@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Happy_Jellyfish"
         tools:targetApi="31">
         <activity
+            android:name=".flappybird.MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".PaperScissorStone.PaperScissorStoneMainActivity"
             android:exported="false" />
         <activity
@@ -20,9 +23,6 @@
             android:exported="false" />
         <activity
             android:name=".TicTacToe.TicTacToeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".Tetris.TetrisActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
