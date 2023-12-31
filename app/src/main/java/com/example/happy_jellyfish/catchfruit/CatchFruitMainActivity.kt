@@ -4,28 +4,28 @@ import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AlertDialog
 import android.view.View
 import android.widget.ImageView
-import androidx.databinding.DataBinderMapperImpl
 import androidx.databinding.DataBindingUtil
-import com.example.happy_jellyfish.R
-import com.halil.ozel.catchthefruits.databinding.ActivityMainBinding
+import com.example.happy_jellyfish.*
+import com.example.happy_jellyfish.databinding.ActivityCatchfruitBinding
 import java.util.*
 
-class catchfruit : AppCompatActivity() {
+class CatchFruitMainActivity : AppCompatActivity() {
 
-    private lateinit var binding: DataBinderMapperImpl
+    private lateinit var binding: ActivityCatchfruitBinding
     private var score = 0
     private val imageArray = ArrayList<ImageView>()
-    private val handler = android.os.Handler(Looper.getMainLooper())
+    private val handler = Handler(Looper.getMainLooper())
     private lateinit var runnable: Runnable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_catchfruit)
-        binding.catchFruits = this
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_catchfruit)
+        binding.catchfruits = this
         binding.score = getString(R.string.score_0)
         score = 0
         imageArray.addAll(
@@ -67,7 +67,7 @@ class catchfruit : AppCompatActivity() {
                 binding.time = getString(R.string.time_up)
                 handler.removeCallbacks(runnable)
 
-                AlertDialog.Builder(this@catchfruit).apply {
+                AlertDialog.Builder(this@CatchFruitMainActivity).apply {
                     setCancelable(false)
                     setTitle(getString(R.string.game_name))
                     setMessage("Your score : $score\nWould you like to play again?")

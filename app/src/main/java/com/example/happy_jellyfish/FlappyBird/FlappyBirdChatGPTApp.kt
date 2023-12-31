@@ -1,4 +1,4 @@
-package com.example.happy_jellyfish.flappybird
+package com.example.happy_jellyfish.FlappyBird
 
 import android.app.Application
 import com.google.android.material.color.DynamicColors

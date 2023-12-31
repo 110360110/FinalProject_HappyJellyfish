@@ -6,8 +6,8 @@
     <data>
 
         <variable
-            name="catchFruits"
-            type="com.example.happy_jellyfish.catchfruit.catchfruit" />
+            name="catchfruits"
+            type="com.example.happy_jellyfish.catchfruit.CatchFruitMainActivity" />
 
         <variable
             name="score"
@@ -42,7 +42,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="0"
                 app:layout_row="0"
                 app:srcCompat="@drawable/apple" />
@@ -52,7 +52,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="1"
                 app:layout_row="0"
                 app:srcCompat="@drawable/bananas" />
@@ -62,7 +62,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="2"
                 app:layout_row="0"
                 app:srcCompat="@drawable/cherry" />
@@ -73,7 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="0"
                 app:layout_row="1"
                 app:srcCompat="@drawable/grapes" />
@@ -83,7 +83,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="1"
                 app:layout_row="1"
                 app:srcCompat="@drawable/kiwi" />
@@ -93,7 +93,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="2"
                 app:layout_row="1"
                 app:srcCompat="@drawable/pear" />
@@ -104,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="0"
                 app:layout_row="2"
                 app:srcCompat="@drawable/orange" />
@@ -114,7 +114,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="1"
                 app:layout_row="2"
                 app:srcCompat="@drawable/watermelon" />
@@ -124,7 +124,7 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/fruit"
-                android:onClick="@{() -> catchFruits.increaseScore()}"
+                android:onClick="@{() -> catchfruits.increaseScore()}"
                 app:layout_column="2"
                 app:layout_row="2"
                 app:srcCompat="@drawable/strawberry" />

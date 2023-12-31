@@ -1,11 +1,10 @@
-package com.example.happy_jellyfish.flappybird
+package com.example.happy_jellyfish.FlappyBird
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.*
 import android.util.AttributeSet
 import android.util.DisplayMetrics
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
@@ -35,6 +34,7 @@ class FlappyBirdView(context: Context?, attrs: AttributeSet?) : View(context, at
             }
             true
         }
+
     }
 
     private val bird = Bird()
