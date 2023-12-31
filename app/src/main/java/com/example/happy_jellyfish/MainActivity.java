@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_choose, tv_textView1;
     private Button btn_open;
     private String[] game=new String[]{"PaperScissorStone","TicTacToe","CatchFruit","FlappyBird","15Puzzle"};
-    private int[] imageresource = new int[]{R.drawable.rockpaperscissor_0,R.drawable.tictactoe,R.drawable.catchthefruit,R.drawable.bird_0,R.drawable.jellyfish};
+    private int[] imageresource = new int[]{R.drawable.rockpaperscissor_0,R.drawable.tictactoe,R.drawable.catchthefruit,R.drawable.bird_0,R.drawable.numbers};
     private String[] explain = new String[]{"跟電腦猜拳，下方EXIT按鈕點擊可回到主畫面","Player1是X，Player2是O，結束可以選擇重玩或是回到主畫面","在10秒內點擊出現的水果","點擊螢幕讓小鳥飛過水管中間的空隙，不可以碰到水管或螢幕邊緣","將15個數字用最少的步數排列"};
 
     @Override
